@@ -10,7 +10,7 @@ class CU02_usuariController extends Controller
     public function index(){
         
         //$users = Usuari::all();
-        return view('usuari.index'); //, (array($users)));
+        return view('usuari.index');//, (array($users)));
     }
     
     

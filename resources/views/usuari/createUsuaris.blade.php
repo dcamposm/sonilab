@@ -1,6 +1,6 @@
-@extends('master')
+{{-- @extends('master')
 
-@section('content')
+@section('content') --}}
 
 <div>
     <div>Afegir usuari</div>
@@ -50,7 +50,7 @@
                     
                     <td><select name="departament" id="departament">
                             <option>Selecciona departament...</option>
-                            <!-- @while -->
+                            {{-- @while --}}
                             <option>Director</option>
                             <option>Product Manager</option>
                             <option>Tècnic de sala</option>

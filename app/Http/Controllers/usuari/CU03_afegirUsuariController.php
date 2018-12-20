@@ -7,5 +7,7 @@ use App\Http\Controllers\Controller;
 
 class CU03_afegirUsuariController extends Controller
 {
-    //
+    public function formCreate(){
+        return view('usuari.createUsuaris');
+    }
 }

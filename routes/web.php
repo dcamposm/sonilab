@@ -15,9 +15,9 @@ Route::get('/', 'CU01_loginController@login');
 
 Route::group(['prefix' => 'usuari'], function () {
     Route::get('index', 'usuari\CU02_usuariController@index');
-    Route::get('crear', 'CU03_afegirUsuariController@formCreate');
+    Route::get('crear', 'usuari\CU03_afegirUsuariController@formCreate');
     Route::post('crear/formulari', 'CU03_afegirUsuariController@create');
-    Route::get('modificar', 'CU04_modificarUsuariController@formUpdate');
+    Route::get('modificar', 'usuari\CU04_modificarUsuariController@formUpdate');
     Route::post('modificar/{alias}', 'CU04_modificarUsuariController@update');
     Route::get('eliminar', 'C05_eliminarUsuariController@delete');
 });
