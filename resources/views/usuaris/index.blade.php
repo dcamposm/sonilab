@@ -1,11 +1,11 @@
-@extends('master')<!-- fichero raiz, viene el header, aside y footer -->
+{{-- @extends('master')<!-- fichero raiz, viene el header, aside y footer --}}
 
 
-@section('content') <!-- se complementa con el @yield -->
+{{-- @section('content') <!-- se complementa con el @yield --}}
 
 <h2>Usuaris</h2>
 
-<!--
+{{--
 <table>
     <tr>
         <th>Alias usuari</th>
@@ -30,8 +30,8 @@
     @endforeach
 
 </table>
--->
+--}}
 
 <label>Por hacer la conexion a la base de datos</label>
 
-@stop
+{{-- @stop --}}
