@@ -23,10 +23,10 @@ Route::group(['prefix' => 'usuari'], function () {
 });
 
 Route::group(['prefix' => 'personal'], function () {
-    Route::get('index', 'CU06_personalController@index');
-    Route::get('crear', 'CU07_afegirPersonalController@formCreate');
+    Route::get('index', 'Personal\CU06_personalController@index');
+    Route::get('crear', 'Personal\CU07_afegirPersonalController@formCreate');
     Route::post('crear/formulari', 'CU07_afegirPersonalController@create');
-    Route::get('modificar', 'CU08_modificarPersonalController@formUpdate');
+    Route::get('modificar', 'Personal\CU08_modificarPersonalController@formUpdate');
     Route::post('modificar/{alias}', 'CU08_modificarPersonalController@update');
     Route::get('eliminar', 'CU09_eliminarPersonalController@delete');
 });
