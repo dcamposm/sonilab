@@ -19,6 +19,11 @@
                     <td>Contrasenya usuari: </td>
                     <td><input type="password" name="contrasenya" id="contrasenya"></td>
                 </tr>
+                
+                <tr>
+                    <td>DNI usuari: </td>
+                    <td><input type="text" name="dni" id="dni"></td>
+                </tr>
 
                 <tr>
                     <td>Nom usuari: </td>
@@ -58,6 +63,8 @@
                 </tr>
     
             </table>
+            
+            <button type="sumbit">Afegir usuari</button>
         </form>
     </div>
 </div>
