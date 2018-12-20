@@ -16,7 +16,7 @@
         <th>Telèfon usuari</th>
     </tr>
     
-    @foreach ($user as $user)
+    @foreach ($users as $user)
     
     <tr>
         <td>{{$user->alias}}</td>
