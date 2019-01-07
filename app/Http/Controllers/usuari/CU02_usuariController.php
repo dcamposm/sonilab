@@ -9,9 +9,8 @@ class CU02_usuariController extends Controller
 {
     public function index(){
         
-        //$users = Usuari::all();
-        return view('usuari.index');//, (array($users)));
+        $users = Usuari::mostrarTots();
+        return view('usuari.index', array('users'=>$users));
     }
-    
     
 }

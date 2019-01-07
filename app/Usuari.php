@@ -8,6 +8,7 @@ class Usuari extends Model
 {
     protected $table = 'usuari';
     protected $primaryKey = 'alias_usuari';
+    public $timestamps = false;
     
     public static function mostrarTots() {
         $list = [];
@@ -20,4 +21,3 @@ class Usuari extends Model
         return $list;
     }
 }
-
