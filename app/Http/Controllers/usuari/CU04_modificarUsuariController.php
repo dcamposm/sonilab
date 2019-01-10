@@ -24,7 +24,7 @@ class CU04_modificarUsuariController extends Controller
         }
         
         $user = new Usuari;
-        $user->alias_usuari = $get['alias'];;
+        $user->alias_usuari = $get['alias'];
         $user->dni_usuari = $post['dni'];
         $user->nom_usuari = $post['nom '];
         $user->primer_cognom_usuari = $post['cog1'];
