@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Usuari extends Model
+class ActorIdioma extends Model
 {
-    protected $table = 'usuari';
-    protected $primaryKey = 'alias_usuari';
+    protected $table = 'actor_idioma';
+    // protected $primaryKey = '';
     public $timestamps = false;
     
     /*
