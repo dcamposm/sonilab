@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <!--PONER QUE SI $user ES FALSE QUE SALGA UN MENSAJE DE ERROR-->
 
 <h2>Modificar Personal #</h2>
@@ -34,3 +36,4 @@
     <br>
     <button type="submit">Modificar</button>
 </form>
+@stop
