@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <h1>LOGIN</h1>
 <div class="spacing_login">
     <!--php echo constant('URL');?>usuari/login-->
@@ -22,3 +24,4 @@
     </form>
 </div>
 
+@stop
