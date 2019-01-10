@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <h1>LOGIN</h1>
 <div class="spacing_login">
     <!--php echo constant('URL');?>usuari/login-->
@@ -10,7 +12,7 @@
 
             <div>
                 <p>Password<p>
-                <input type="password" name='pass'/>
+                <input type='text' name='pass'/>
             </div>
             <label><input type="checkbox" id="check" value="rem"> Remember username</label>
         </div>
@@ -22,3 +24,4 @@
     </form>
 </div>
 
+@stop

@@ -1,11 +1,11 @@
-{{-- @extends('master')<!-- fichero raiz, viene el header, aside y footer --}}
+{{ --@extends('master') fichero raiz, viene el header, aside y footer --}}
 
 
-{{-- @section('content') <!-- se complementa con el @yield --}}
-
+ @section('content')  se complementa con el @yield 
+ 
 <h2>Usuaris</h2>
 
-{{--
+
 <table>
     <tr>
         <th>Alias usuari</th>
@@ -19,19 +19,19 @@
     @foreach ($users as $user)
     
     <tr>
-        <td>{{$user->alias}}</td>
-        <td>{{$user->nom}}</td>
-        <td>{{$user->primer_cognom}}</td>
-        <td>{{$user->segon_cognom}}</td>
-        <td>{{$user->email}}</td>
-        <td>{{$user->telefon}}</td>
+        <td>{{$user->alias_usuari}}</td>
+        <td>{{$user->nom_usuari}}</td>
+        <td>{{$user->primer_cognom_usuari}}</td>
+        <td>{{$user->segon_cognom_usuari}}</td>
+        <td>{{$user->email_usuari}}</td>
+        <td>{{$user->telefon_usuari}}</td>
     </tr>
     
     @endforeach
 
 </table>
---}}
 
+{{--
 <label>Por hacer la conexion a la base de datos</label>
-
-{{-- @stop --}}
+--}}
+@stop 
