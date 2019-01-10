@@ -10,7 +10,7 @@
 
             <div>
                 <p>Password<p>
-                <input type='text' name='pass'/>
+                <input type="password" name='pass'/>
             </div>
             <label><input type="checkbox" id="check" value="rem"> Remember username</label>
         </div>
