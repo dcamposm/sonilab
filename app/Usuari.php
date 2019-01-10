@@ -20,4 +20,6 @@ class Usuari extends Model
         }
         return $list;
     }
+    
+    
 }
