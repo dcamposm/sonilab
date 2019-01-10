@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <br>
 <form action="#" method="post" enctype="multipart/form-data"> 
     <p>DNI</p>
@@ -42,3 +44,4 @@
     <button type="submit">Create</button>
 
 </form>
+@stop

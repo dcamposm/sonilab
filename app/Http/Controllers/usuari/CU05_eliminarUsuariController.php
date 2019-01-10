@@ -8,11 +8,12 @@ use App\Http\Controllers\Controller;
 class CU05_eliminarUsuariController extends Controller
 {
     public function delete() {
-        if (!isset($_GET['alias'])) {
-            return call('pages', 'error');
+        if (!isset($get['alias'])) {
+            return view('pages.error');
         }
-       
-        Usuari::eliminar($_GET['alias']);
+        
+        $user = Usuari::where('alias', '=', $get['alias'])->delete();     
+        //Usuari::eliminar($_GET['alias']);
         
         return redirect()->action('usuari\CU02_usuariController@index');
     }

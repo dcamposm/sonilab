@@ -4,10 +4,10 @@
                         <div class="menu">
                             <div class="nav">
                                 <a href='#'>Projecte</a>
-                                <a href='{{'personal/index'}}'>Personal</a>
+                                <a href='{{url('personal/index')}}'>Personal</a>
                                 <a href='#'>Calendari</a>
                                 <a href='#'>Registres</a>
-                                <a href='{{'usuari/index'}}'>Usuaris</a>
+                                <a href='{{url('usuari/index')}}'>Usuaris</a>
                                 <a href='{{}}'>Perfil</a>
                             </div>
                             <a href='#'>
