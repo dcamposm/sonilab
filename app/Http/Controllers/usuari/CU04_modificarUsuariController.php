@@ -5,6 +5,7 @@ namespace App\Http\Controllers\usuari;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Usuari;
+
 class CU04_modificarUsuariController extends Controller
 {
     public function formUpdate($alias_usuari) {
