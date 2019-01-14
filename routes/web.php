@@ -27,6 +27,6 @@ Route::group(['prefix' => 'personal'], function () {
     Route::get('crear', 'Personal\CU07_afegirPersonalController@formCreate');
     Route::post('crear/formulari', 'CU07_afegirPersonalController@create');
     Route::get('modificar/{alias}', 'Personal\CU08_modificarPersonalController@formUpdate');
-    Route::post('modificar//formulari/{alias}', 'CU08_modificarPersonalController@update');
+    Route::post('modificar/formulari/{alias}', 'CU08_modificarPersonalController@update');
     Route::get('eliminar/{alias}', 'CU09_eliminarPersonalController@delete');
 });

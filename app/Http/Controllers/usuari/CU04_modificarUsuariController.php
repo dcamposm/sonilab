@@ -4,15 +4,16 @@ namespace App\Http\Controllers\usuari;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Usuari;
 class CU04_modificarUsuariController extends Controller
 {
     public function formUpdate($alias_usuari) {
         /*if (!isset($_GET['alias'])) {
             return view('pages.error');
         }*/
-        
-        $user=Movie::findOrFail($alias_usuari);
+     
+
+        $user=Usuari::findOrFail($alias_usuari);
        // $user = Usuari::where('alias', '=', $get['alias'])->get();
         //$user = Usuari::buscar($_GET['alias']);
         

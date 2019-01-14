@@ -19,7 +19,7 @@
                 
                 <tr>
                     <td>DNI usuari: </td>
-                    <td><input type="text" name="dni" id="dni"></td>
+                    <td><input type="text" name="dni" id="dni" value="{{$user->dni_usuari}}"></td>
                 </tr>
 
                 <tr>
