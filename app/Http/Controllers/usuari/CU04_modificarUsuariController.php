@@ -7,12 +7,13 @@ use App\Http\Controllers\Controller;
 
 class CU04_modificarUsuariController extends Controller
 {
-    public function formUpdate() {
-        if (!isset($_GET['alias'])) {
+    public function formUpdate($alias_usuari) {
+        /*if (!isset($_GET['alias'])) {
             return view('pages.error');
-        }
+        }*/
         
-        $user = Usuari::where('alias', '=', $get['alias'])->get();
+        $user=Movie::findOrFail($alias_usuari);
+       // $user = Usuari::where('alias', '=', $get['alias'])->get();
         //$user = Usuari::buscar($_GET['alias']);
         
         return view('usuari.modificarUsuaris', array('user'=>$user));
