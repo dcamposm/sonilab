@@ -1,8 +1,5 @@
-{{ --@extends('master') fichero raiz, viene el header, aside y footer --}}
-
-
- @section('content')  se complementa con el @yield 
- 
+@extends('layouts.master')
+@section('content')
 <h2>Usuaris</h2>
 
 

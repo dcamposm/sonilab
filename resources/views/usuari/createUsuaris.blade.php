@@ -5,7 +5,7 @@
 <div>
     <div>Afegir usuari</div>
     <div>
-        <form method="POST">
+        <form method="POST" action="{{ url('/usuari/crear/formulari') }}">
             {{ csrf_field() }}
             
             <table>
@@ -56,8 +56,8 @@
                     <td><select name="departament" id="departament">
                             <option>Selecciona departament...</option>
                             {{-- @while --}}
-                            <option>Director</option>
-                            <option>Product Manager</option>
+                            <option value="1">Director</option>
+                            <option value="2">Product Manager</option>
                             <option>Tècnic de sala</option>
                         </select></td>
                 </tr>
