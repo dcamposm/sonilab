@@ -27,7 +27,7 @@
     @endforeach
 
 </table>
-
+<a href='{{url('usuari/crear')}}'>Usuaris</a>
 {{--
 <label>Por hacer la conexion a la base de datos</label>
 --}}
