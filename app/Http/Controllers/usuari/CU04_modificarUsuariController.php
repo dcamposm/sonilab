@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class CU04_modificarUsuariController extends Controller
 {
     public function formUpdate() {
-        if (!isset($get['alias'])) {
+        if (!isset($_GET['alias'])) {
             return view('pages.error');
         }
         
