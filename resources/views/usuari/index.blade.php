@@ -33,7 +33,7 @@
     @endforeach
 
 </table>
-<a href='{{url('usuari/crear')}}'>Usuaris</a>
+<a href='{{url('usuari/crear')}}'>Afegir Usuari</a>
 {{--
 <label>Por hacer la conexion a la base de datos</label>
 --}}

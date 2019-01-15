@@ -1,6 +1,5 @@
-{{-- @extends('master')
-
-@section('content') --}}
+@extends('layouts.master')
+@section('content')
 
 <div>
     <div>Modificar usuari</div>
@@ -65,3 +64,5 @@
         </form>
     </div>
 </div>
+
+@stop
