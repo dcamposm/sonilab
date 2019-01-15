@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ActorIdioma extends Model
 {
     protected $table = 'actor_idioma';
-    // protected $primaryKey = '';
+    // $table->primary(['dni_actor', 'id_idioma']);
     public $timestamps = false;
     
     /*

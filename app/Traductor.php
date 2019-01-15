@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Traductor extends Model
 {
     protected $table = 'traductor';
-    protected $primaryKey = 'dni_traductor';
+    // protected $primaryKey = 'dni_traductor';
     public $timestamps = false;
     
     /*

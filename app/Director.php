@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Director extends Model
 {
     protected $table = 'director';
-    protected $primaryKey = 'dni_director';
+    // protected $primaryKey = 'dni_director';
     public $timestamps = false;
     
     /*

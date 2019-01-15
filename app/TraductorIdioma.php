@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class TraductorIdioma extends Model
 {
     protected $table = 'traductor_idioma';
-    // protected $primaryKey = '';
     public $timestamps = false;
     
     /*
