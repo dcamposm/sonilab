@@ -5,6 +5,7 @@ namespace App\Http\Controllers\usuari;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Usuari;
+use App\DepartamentUsuari;
 
 class CU04_modificarUsuariController extends Controller
 {
@@ -17,9 +18,10 @@ class CU04_modificarUsuariController extends Controller
         //$user=Usuari::findOrFail($alias_usuari);
         
         $user = Usuari::where('alias_usuari', $alias_usuari)->firstOrFail();
+        $departament = DepartamentUsuari::where('id_rol', $user->id_departament)->firstOrFail();
         //$user = Usuari::buscar($_GET['alias']);
         
-        return view('usuari.modificarUsuaris', array('user'=>$user));
+        return view('usuari.modificarUsuaris', array('user'=>$user,'departament'=>$departament));
     }
 
     public function update() {
