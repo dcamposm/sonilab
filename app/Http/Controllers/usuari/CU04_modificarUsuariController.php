@@ -14,9 +14,9 @@ class CU04_modificarUsuariController extends Controller
         }*/
      
 
-        $user=Usuari::findOrFail($alias_usuari);
+        //$user=Usuari::findOrFail($alias_usuari);
         
-       // $user = Usuari::where('alias', '=', $get['alias'])->get();
+        $user = Usuari::where('alias', $alias_usuari)->get();
         //$user = Usuari::buscar($_GET['alias']);
         
         return view('usuari.modificarUsuaris', array('user'=>$user));
