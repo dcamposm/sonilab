@@ -13,7 +13,7 @@ class CU05_eliminarUsuariController extends Controller
             return view('pages.error');
         }*/
         
-        $user = Usuari::where('alias', $alias_usuari)->delete();     
+        $user = Usuari::where('alias_usuari', $alias_usuari)->delete();     
         //Usuari::eliminar($_GET['alias']);
         
         return redirect()->action('usuari\CU02_usuariController@index');

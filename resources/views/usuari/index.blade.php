@@ -26,7 +26,7 @@
         <td>
             <a>Detalles</a>
             <a href="{{url('usuari/modificar/'.$user->alias_usuari)}}">Modificar</a>
-            <a>Eliminar</a>
+            <a href="{{url('usuari/eliminar/'.$user->alias_usuari)}}">Eliminar</a>
         </td>
     </tr>
 
