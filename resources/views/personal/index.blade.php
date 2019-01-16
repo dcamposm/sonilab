@@ -5,19 +5,19 @@
 
 <table>
     <tr>
-        <th>DNI personal</th>
-        <th>Nom personal</th>
-        <th>Cognom personal</th>
-        <th>Segon cognom personal</th>
-        <th>Email personal</th>
-        <th>Telèfon personal</th>
-        <th>Direccio personal</th>
-        <th>Data naixement personal</th>
-        <th>Sexe personal</th>
-        <th>Nacionalitat personal</th>
-        <th>NSS personal</th>
-        <th>IBAN personal</th>
-        <th>Rol personal</th>
+        <th>DNI</th>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Segon cognom</th>
+        <th>Email</th>
+        <th>Telèfon</th>
+        <th>Direccio</th>
+        <th>Data naixement</th>
+        <th>Sexe</th>
+        <th>Nacionalitat</th>
+        <th>NSS</th>
+        <th>IBAN</th>
+        <th>Rol</th>
         <th>Acciones</th>
     </tr>
 

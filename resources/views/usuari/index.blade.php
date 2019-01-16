@@ -24,7 +24,6 @@
         <td>{{$user->email_usuari}}</td>
         <td>{{$user->telefon_usuari}}</td>
         <td>
-            <a>Detalles</a>
             <a href="{{url('usuari/modificar/'.$user->alias_usuari)}}">Modificar</a>
             <a href="{{url('usuari/eliminar/'.$user->alias_usuari)}}">Eliminar</a>
         </td>

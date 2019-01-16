@@ -4,8 +4,7 @@
 <div>
     <div>Modificar Director</div>
     <div>
-        <form method="POST" action="{{ url('/pesonal/modificar/formulari/')}}{{ $per->rol }}/{{ $per->dni_director }}">
-            {{method_field('PUT')}}
+        <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_director }}">
             
             {{ csrf_field() }}
             

@@ -43,15 +43,14 @@ class CU08_modificarPersonalController extends Controller
         }
 
     }
-    public function update(Request $request) {
-        if (!isset($_GET['dni'])){
+    public function update(Request $request, $rol, $dni) {
+        /*if (!isset($_GET['dni'])){
             return view('pages', 'error');
-        }
+        }*/
         
-        switch ($request->input('rol')){
+        switch ($rol){
             case 'actor': 
-                $pers = new Actor;
-                $pers->dni_actor=$_GET('dni');
+                $pers = Actor::where('dni_actor', $dni)->firstOrFail();
                 $pers->nom_actor=$request->input('nom');
                 $pers->primer_cognom_actor=$request->input('cog1');
                 $pers->segon_cognom_actor=$request->input('cog2');
@@ -66,8 +65,7 @@ class CU08_modificarPersonalController extends Controller
                 break;
             
             case 'director':
-                $pers = new Director;
-                $pers->dni_director=$_GET('dni');
+                $pers = Director::where('dni_director', $dni)->firstOrFail();
                 $pers->nom_director=$request->input('nom');
                 $pers->primer_cognom_director=$request->input('cog1');
                 $pers->segon_cognom_director=$request->input('cog2');
@@ -82,8 +80,7 @@ class CU08_modificarPersonalController extends Controller
                 break;
             
             case 'tecnic_sala':
-                $pers = new TecnicSala;
-                $pers->dni_tecnic_sala=$_GET('dni');
+                $pers = TecnicSala::where('dni_tecnic_sala', $dni)->firstOrFail();
                 $pers->nom_tecnic_sala=$request->input('nom');
                 $pers->primer_cognom_tecnic_sala=$request->input('cog1');
                 $pers->segon_cognom_tecnic_sala=$request->input('cog2');
@@ -98,8 +95,7 @@ class CU08_modificarPersonalController extends Controller
                 break;
             
             case 'traductor':
-                $pers = new Traductor;
-                $pers->dni_traductor=$_GET('dni');
+                $pers = Traductor::where('dni_traductor', $dni)->firstOrFail();
                 $pers->nom_traductor=$request->input('nom');
                 $pers->primer_cognom_traductor=$request->input('cog1');
                 $pers->segon_cognom_traductor=$request->input('cog2');
@@ -118,6 +114,6 @@ class CU08_modificarPersonalController extends Controller
         
         //Personal::modificar($_GET['dni'], $_POST['nom'], $_POST['cog1'], $_POST['cog2'], $_POST['email'], $_POST['telefon'], $_POST['dire'], $_POST['naix'], $_POST['nss'], $_POST['iban']);
         
-        return redirect()->action('usuari\CU06_usuariController@index');
+        return redirect()->action('Personal\CU06_personalController@index');
     }
 }

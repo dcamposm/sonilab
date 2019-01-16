@@ -4,8 +4,7 @@
 <div>
     <div>Modificar usuari</div>
     <div>
-        <form method="POST" action="{{ url('/usuari/modificar/formulari/') }}{{ $user->alias_usuari }}">
-            {{method_field('PUT')}}
+        <form method="POST" action="{{ url('/usuari/modificar/formulari') }}/{{ $user->alias_usuari }}">
             
             {{ csrf_field() }}
             
@@ -50,7 +49,7 @@
                     <td>Departament usuari: </td> 
                     
                     <td><select name="departament" id="departament">
-                            <option>{{$departament->nom_rol}}</option>
+                            <option value="{{$user->id_departament}}">{{$departament->nom_rol}}</option>
                             {{-- @while --}}
                             <option value="1">Director</option>
                             <option value="2">Product Manager</option>

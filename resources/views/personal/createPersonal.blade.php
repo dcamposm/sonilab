@@ -98,8 +98,8 @@
                             {{-- @while --}}
                             <option value="actor">Actor</option>
                             <option value="director">Director de doblatge</option>
-                            <option valor="tecnic">Tècnic de sala</option>
-                            <option valor="tradurctor">Traductor/Ajustador</option>
+                            <option value="tecnic_sala">Tècnic de sala</option>
+                            <option value="traductor">Traductor/Ajustador</option>
                         </select></td>
                 </tr>
 
