@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Personal;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Actor;
+use App\Director;
+use App\TecnicSala;
+use App\Traductor;
+
 class CU08_modificarPersonalController extends Controller
 {
     public function formUpdate() {
@@ -20,7 +25,7 @@ class CU08_modificarPersonalController extends Controller
             return view('pages', 'error');
         }
         
-        switch (rol){
+        switch ($request->input('rol')){
             case 'actor': 
                 $pers = new Actor;
                 $pers->dni_actor=$_GET('dni');

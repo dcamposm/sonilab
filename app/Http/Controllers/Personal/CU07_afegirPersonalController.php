@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Personal;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Actor;
+use App\Director;
+use App\TecnicSala;
+use App\Traductor;
+
 class CU07_afegirPersonalController extends Controller {
 
     public function formCreate() {
@@ -40,8 +45,7 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->sexe_director=$request->input('sexe');
                 $pers->nacionalitat_director=$request->input('nacionalitat');
                 $pers->nss_director=$request->input('nss');
-                $pers->iban_director=$request->input('iban');
-                
+                $pers->iban_director=$request->input('iban');                
                 break;
             case 'tecnic_sala':
                 $pers = new TecnicSala;
