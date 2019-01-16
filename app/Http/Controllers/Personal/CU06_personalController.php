@@ -13,14 +13,12 @@ class CU06_personalController extends Controller
 {
     public function index() {
         
-        $actor = Actor::all();
-        $director = Director::all();
+        $actors = Actor::all();
+        $directors = Director::all();
         $tecnic = TecnicSala::all();
         $traductor = Traductor::all();
-        
-        $pers = array_merge($actor, $director, $tecnic, $traductor);
-        
-        return view('personal.index', array('personal'=>$pers));
+
+        return view('personal.index', array('actors'=>$actors, 'directors'=>$directors, 'tecnics'=>$tecnic, 'traductors'=>$traductor));
         
     }
 }

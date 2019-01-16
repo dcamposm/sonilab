@@ -10,9 +10,9 @@ use App\DepartamentUsuari;
 class CU04_modificarUsuariController extends Controller
 {
     public function formUpdate($alias_usuari) {
-        if (!isset($_GET['alias'])) {
+        /*if (!isset($_GET['alias'])) {
             return view('pages.error');
-        }
+        }*/
      
 
         //$user=Usuari::findOrFail($alias_usuari);

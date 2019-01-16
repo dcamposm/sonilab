@@ -11,14 +11,30 @@ use App\Traductor;
 
 class CU08_modificarPersonalController extends Controller
 {
-    public function formUpdate() {
-        if (!isset($_GET['dni'])) {
+    public function formUpdate($rol, $dni) {
+        /*if (!isset($_GET['dni'])) {
             return view('pages', 'error');
-        }
+        }*/
         // utilizamos el id para obtener el post correspondiente
-        $per = Personal::buscar($_GET['dni']);
+        switch ($rol){
+            case 'actor': 
+                $per = Actor::where('dni_actor', $dni)->firstOrFail();
+                break;
+            
+            case 'director':
+                $per = Actor::where('dni_director', $dni)->firstOrFail();             
+                break;
+            
+            case 'tecnic_sala':
+                $per = Actor::where('dni_tecnic_sala', $dni)->firstOrFail();
+                break;
+            
+            case 'traductor':
+                $per = Actor::where('dni_traductor', $dni)->firstOrFail();
+                break;
+        }
         
-        return view ('personal.formUpdate');
+        return view('personal.modificarPersonal', array('per'=>$per));
     }
     public function update(Request $request) {
         if (!isset($_GET['dni'])){
@@ -61,7 +77,6 @@ class CU08_modificarPersonalController extends Controller
             case 'tecnic_sala':
                 $pers = new TecnicSala;
                 $pers->dni_tecnic_sala=$_GET('dni');
-                $pers->dni_tecnic_sala=$request->input('dni');
                 $pers->nom_tecnic_sala=$request->input('nom');
                 $pers->primer_cognom_tecnic_sala=$request->input('cog1');
                 $pers->segon_cognom_tecnic_sala=$request->input('cog2');
