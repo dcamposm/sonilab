@@ -9,69 +9,69 @@ class CU07_afegirPersonalController extends Controller {
     public function formCreate() {
         return view('personal.createPersonal');
     }
-    public function create() {
+    public function create(Request $request) {
         //personal actor,director,tecnic de sala,traductor
-        switch (rol){
+        switch ($request->input('rol')){
             case 'actor': 
                 $pers = new Actor;
-                $pers->dni_actor=$POST('dni');
-                $pers->nom_actor=$POST('nom');
-                $pers->primer_cognom_actor=$POST('cog1');
-                $pers->segon_cognom_actor=$POST('cog2');
-                $pers->email_actor=$POST('email');
-                $pers->telefon_actor=$POST('telefon');
-                $pers->direccio_actor=$POST('direccio');
-                $pers->data_naixement_actor=$POST('datanaix');
-                $pers->sexe_actor=$POST('sexe');
-                $pers->nacionalitat_actor=$POST('nacionalitat');
-                $pers->nss_actor=$POST('nss');
-                $pers->iban_actor=$POST('iban');
+                $pers->dni_actor=$request->input('dni');
+                $pers->nom_actor=$request->input('nom');
+                $pers->primer_cognom_actor=$request->input('cog1');
+                $pers->segon_cognom_actor=$request->input('cog2');
+                $pers->email_actor=$request->input('email');
+                $pers->telefon_actor=$request->input('telefon');
+                $pers->direccio_actor=$request->input('direccio');
+                $pers->data_naixement_actor=$request->input('datanaix');
+                $pers->sexe_actor=$request->input('sexe');
+                $pers->nacionalitat_actor=$request->input('nacionalitat');
+                $pers->nss_actor=$request->input('nss');
+                $pers->iban_actor=$request->input('iban');
                 break;
             case 'director':
                 $pers = new Director;
-                $pers->dni_director=$POST('dni');
-                $pers->nom_director=$POST('nom');
-                $pers->primer_cognom_director=$POST('cog1');
-                $pers->egon_cognom_director=$POST('cog2');
-                $pers->email_director=$POST('email');
-                $pers->telefon_director=$POST('telefon');
-                $pers->direccio_director=$POST('direccio');
-                $pers->data_naixement_director=$POST('datanaix');
-                $pers->sexe_director=$POST('sexe');
-                $pers->nacionalitat_director=$POST('nacionalitat');
-                $pers->nss_director=$POST('nss');
-                $pers->iban_director=$POST('iban');
+                $pers->dni_director=$request->input('dni');
+                $pers->nom_director=$request->input('nom');
+                $pers->primer_cognom_director=$request->input('cog1');
+                $pers->segon_cognom_director=$request->input('cog2');
+                $pers->email_director=$request->input('email');
+                $pers->telefon_director=$request->input('telefon');
+                $pers->direccio_director=$request->input('direccio');
+                $pers->data_naixement_director=$request->input('datanaix');
+                $pers->sexe_director=$request->input('sexe');
+                $pers->nacionalitat_director=$request->input('nacionalitat');
+                $pers->nss_director=$request->input('nss');
+                $pers->iban_director=$request->input('iban');
                 
                 break;
             case 'tecnic_sala':
                 $pers = new TecnicSala;
-                $pers->dni_tecnic_sala=$POST('dni');
-                $pers->nom_tecnic_sala=$POST('nom');
-                $pers->primer_cognom_tecnic_sala=$POST('cog1');
-                $pers->segon_cognom_tecnic_sala=$POST('cog2');
-                $pers->email_tecnic_sala=$POST('email');
-                $pers->telefon_tecnic_sala=$POST('telefon');
-                $pers->direccio_tecnic_sala=$POST('direccio');
-                $pers->data_naixement_tecnic_sala=$POST('datanaix');
-                $pers->sexe_tecnic_sala=$POST('sexe');
-                $pers->nacionalitat_tecnic_sala=$POST('nacionalitat');
-                $pers->nss_tecnic_sala=$POST('nss');
-                $pers->iban_tecnic_sala=$POST('iban');
+                $pers->dni_tecnic_sala=$request->input('dni');
+                $pers->nom_tecnic_sala=$request->input('nom');
+                $pers->primer_cognom_tecnic_sala=$request->input('cog1');
+                $pers->segon_cognom_tecnic_sala=$request->input('cog2');
+                $pers->email_tecnic_sala=$request->input('email');
+                $pers->telefon_tecnic_sala=$request->input('telefon');
+                $pers->direccio_tecnic_sala=$request->input('direccio');
+                $pers->data_naixement_tecnic_sala=$request->input('datanaix');
+                $pers->sexe_tecnic_sala=$request->input('sexe');
+                $pers->nacionalitat_tecnic_sala=$request->input('nacionalitat');
+                $pers->nss_tecnic_sala=$request->input('nss');
+                $pers->iban_tecnic_sala=$request->input('iban');
                 break;
             case 'traductor':
                 $pers = new Traductor;
-                $pers->dni_traductor=$POST('dni');
-                $pers->nom_traductor=$POST('nom');
-                $pers->primer_cognom_traductor=$POST('cog1');
-                $pers->segon_cognom_traductor=$POST('cog2');
-                $pers->email_traductor=$POST('email');
-                $pers->telefon_traductor=$POST('telefon');
-                $pers->direccio_traductor=$POST('direccio');
-                $pers->data_naixement_traductor=$POST('datanaix');
-                $pers->sexe_traductor=$POST('sexe');
-                $pers->nacionalitat_traductor=$POST('nacionalitat');
-                $pers->nss_traductor=$POST('nss');
-                $pers->iban_traductor=$POST('iban');
+                $pers->dni_traductor=$request->input('dni');
+                $pers->nom_traductor=$request->input('nom');
+                $pers->primer_cognom_traductor=$request->input('cog1');
+                $pers->segon_cognom_traductor=$request->input('cog2');
+                $pers->email_traductor=$request->input('email');
+                $pers->telefon_traductor=$request->input('telefon');
+                $pers->direccio_traductor=$request->input('direccio');
+                $pers->data_naixement_traductor=$request->input('datanaix');
+                $pers->sexe_traductor=$request->input('sexe');
+                $pers->nacionalitat_traductor=$request->input('nacionalitat');
+                $pers->nss_traductor=$request->input('nss');
+                $pers->iban_traductor=$request->input('iban');
                 break;
         }
         
