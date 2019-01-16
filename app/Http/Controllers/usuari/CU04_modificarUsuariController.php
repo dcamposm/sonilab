@@ -9,9 +9,9 @@ use App\Usuari;
 class CU04_modificarUsuariController extends Controller
 {
     public function formUpdate($alias_usuari) {
-        /*if (!isset($_GET['alias'])) {
+        if (!isset($_GET['alias'])) {
             return view('pages.error');
-        }*/
+        }
      
 
         //$user=Usuari::findOrFail($alias_usuari);
@@ -22,21 +22,21 @@ class CU04_modificarUsuariController extends Controller
         return view('usuari.modificarUsuaris', array('user'=>$user));
     }
 
-    public function update() {
+    public function update(Request $request) {
         if (!isset($_GET['alias'])){
             return view('pages.error');
         }
         
         $user = new Usuari;
-        $user->alias_usuari = $_GET['alias'];
-        $user->dni_usuari = $_POST['dni'];
-        $user->nom_usuari = $_POST['nom '];
-        $user->primer_cognom_usuari = $_POST['cog1'];
-        $user->segon_cognom_usuari = $_POST['cog2'];
-        $user->email_usuari = $_POST['email'];
-        $user->telefon_usuari = $_POST['tel'];
-        $user->contrasenya_usuari = $_POST['pass'];
-        $user->id_departament = $_POST['id_dep'];
+        $user->alias_usuari = $request->input('alias');
+        $user->dni_usuari = $request->input('dni');
+        $user->nom_usuari = $request->input('nom');
+        $user->primer_cognom_usuari = $request->input('primer_cognom');
+        $user->segon_cognom_usuari = $request->input('segon_cognom');
+        $user->email_usuari = $request->input('email');
+        $user->telefon_usuari = $request->input('tel');
+        $user->contrasenya_usuari = $request->input('contrasenya');
+        $user->id_departament = $request->input('departament');
         $user->save();
         
         //Usuari::modificar($get['alias'],$post['nom'],$post['cog1'],$post['cog2'],$post['email'],$post['tel'],$post['pass']);
