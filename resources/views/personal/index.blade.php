@@ -60,8 +60,8 @@
             <td>{{$dir->iban_director}}</td>
             <td>{{$dir->rol}}</td>
             <td>
-                <a href="{{url('personal/modificar/'.$actor->rol."/".$actor->dni_director)}}">Modificar</a>
-                <a href="{{url('personal/eliminar/'.$actor->rol."/".$actor->dni_director)}}">Eliminar</a>
+                <a href="{{url('personal/modificar/'.$dir->rol."/".$dir->dni_director)}}">Modificar</a>
+                <a href="{{url('personal/eliminar/'.$dir->rol."/".$dir->dni_director)}}">Eliminar</a>
             </td>
         </tr>
     @endforeach
@@ -82,8 +82,8 @@
             <td>{{$tecnic->iban_tecnic_sala}}</td>
             <td>{{$tecnic->rol}}</td>
             <td>
-                <a href="{{url('personal/modificar/'.$actor->rol."/".$actor->dni_tecnic_sala)}}">Modificar</a>
-                <a href="{{url('personal/eliminar/'.$actor->rol."/".$actor->dni_tecnic_sala)}}">Eliminar</a>
+                <a href="{{url('personal/modificar/'.$tecnic->rol."/".$tecnic->dni_tecnic_sala)}}">Modificar</a>
+                <a href="{{url('personal/eliminar/'.$tecnic->rol."/".$tecnic->dni_tecnic_sala)}}">Eliminar</a>
             </td>
         </tr>
     @endforeach
@@ -104,8 +104,8 @@
             <td>{{$traductor->iban_traductor}}</td>
             <td>{{$traductor->rol}}</td>
             <td>
-                <a href="{{url('personal/modificar/'.$actor->rol."/".$actor->dni_traductor)}}">Modificar</a>
-                <a href="{{url('personal/eliminar/'.$actor->rol."/".$actor->dni_traductor)}}">Eliminar</a>
+                <a href="{{url('personal/modificar/'.$traductor->rol."/".$traductor->dni_traductor)}}">Modificar</a>
+                <a href="{{url('personal/eliminar/'.$traductor->rol."/".$traductor->dni_traductor)}}">Eliminar</a>
             </td>
         </tr>
     @endforeach
