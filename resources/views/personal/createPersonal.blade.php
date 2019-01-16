@@ -1,47 +1,113 @@
 @extends('layouts.master')
 @section('content')
-<br>
-<form action="#" method="post" enctype="multipart/form-data"> 
-    <p>DNI</p>
-    <input type='text' name='dni'/>
+{{--borrar los br y hacer css--}}
 
-    <p>Nom</p>
-    <input type='text' name='nom'/>
-    <p>Primer Cognom</p>
-    <input type='text' name='cog1'/>
-    <p>Segon Cognom</p>
-    <input type='text' name='cog2' />
-    <p>Email</p>
-    <input type='email' name='email' />
-    <p>Telefon</p>
-    <input type='text' name='telefon'/>
-    <p>Direcció</p>
-    <input type='text' name='dire'/>
-    <p>Data de Naixement</p>
-    <input type='date' name='naix' />
-    <p>NSS</p>
-    <input type='text' name='nss' />
-    <p>IBAN</p>
-    <input type='text' name='iban' />
-    <!--<p>Idioma</p>
-    <input type='text' name='idioma' />-->
+<div>
 
-    <br>
-    <!--<br>
-    <p>Sub-categoria</p>
-    
-    <select name='sub_categoria'>
-        <option>Selecciona...</option>
-        <option name='actor'>Actor</option>
-        <option name='traductor'>Traductor--Ajustador--Lingüista</option>
-        <option name='ajustador'>Ajustador</option>
-        <option name='linguista'>Lingüista</option>
-        <option name='direcDbl'>Director de doblatge</option>
-        <option name='tecSala'>Tècnic de sala</option>
-        <option name='direcProd'>Director</option>
-    </select>-->
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        Afegir Personal</div>
 
-    <button type="submit">Create</button>
+    <div>
+        <form method="POST" action="{{ url('/personal/crear/formulari') }}">
+            {{ csrf_field() }}
 
-</form>
+            <table>
+
+                <tr>
+                    <td>DNI: </td>
+                    <td><input type="text" name="dni" id="dni"></td>
+                </tr>
+
+                <tr>
+                    <td>Nom: </td>
+                    <td><input type="text" name="nom" id="nom"></td>
+                </tr>
+                
+                <tr>
+                    <td>Primer Congom: </td>
+                    <td><input type="text" name="cog1" id="cog1"></td>
+                </tr>
+
+                <tr>
+                    <td>Segon Cognom: </td>
+                    <td><input type="text" name="cog2" id="cog2"></td>
+                </tr>
+
+                <tr>
+                    <td>Email: </td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Telèfon: </td>
+                    <td><input type="number" name="telefon" id="telefon"></td>
+                </tr>
+
+                <tr>
+                    <td>Direccio: </td>
+                    <td><input type="text" name="direccio" id="direccio"></td>
+                </tr>
+
+                <tr>
+                    <td>Data Naixment: </td>
+                    <td><input type="date" name="datanaix" id="datanaix"></td>
+                </tr>
+                
+                <tr>
+                    <td>Sexe: </td> 
+                    
+                    <td><select name="sexe" id="sexe">
+                            <option>Selecciona departament...</option>
+                            {{-- @while --}}
+                            <option value="home">Home</option>
+                            <option value="dona">Dona</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nacionalitat: </td>
+                    <td><input type="text" name="nacionalitat" id="nacionalitat"></td>
+                </tr>
+
+                <tr>
+                    <td>NSS: </td>
+                    <td><input type="text" name="nss" id="nss"></td>
+                </tr>
+
+                <tr>
+                    <td>IBAN: </td>
+                    <td><input type="text" name="iban" id="iban"></td>
+                </tr>
+                
+                <tr>
+                    <td>Rol: </td> 
+
+                    <td><select name="rol" id="rol">
+                            <option>Selecciona departament...</option>
+                            {{-- @while --}}
+                            <option value="actor">Actor</option>
+                            <option value="director">Director de doblatge</option>
+                            <option valor="tecnic">Tècnic de sala</option>
+                            <option valor="tradurctor">Traductor/Ajustador</option>
+                        </select></td>
+                </tr>
+
+            </table>
+
+            <button type="sumbit">Afegir personal</button>
+        </form>
+    </div>
+</div>
+
 @stop
