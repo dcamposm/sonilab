@@ -19,22 +19,29 @@ class CU08_modificarPersonalController extends Controller
         switch ($rol){
             case 'actor': 
                 $per = Actor::where('dni_actor', $dni)->firstOrFail();
+                        
+                return view('personal.modificarPersonalActor', array('per'=>$per));
                 break;
             
             case 'director':
-                $per = Actor::where('dni_director', $dni)->firstOrFail();             
+                $per = Actor::where('dni_director', $dni)->firstOrFail();
+                        
+                return view('personal.modificarPersonalDirector', array('per'=>$per));
                 break;
             
             case 'tecnic_sala':
                 $per = Actor::where('dni_tecnic_sala', $dni)->firstOrFail();
+                        
+                return view('personal.modificarPersonalTecnic', array('per'=>$per));
                 break;
             
             case 'traductor':
                 $per = Actor::where('dni_traductor', $dni)->firstOrFail();
+                        
+                return view('personal.modificarPersonalTraductor', array('per'=>$per));
                 break;
         }
-        
-        return view('personal.modificarPersonal', array('per'=>$per));
+
     }
     public function update(Request $request) {
         if (!isset($_GET['dni'])){
