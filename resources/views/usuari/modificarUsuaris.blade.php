@@ -52,9 +52,9 @@
                     <td><select name="departament" id="departament">
                             <option>{{$departament->nom_rol}}</option>
                             {{-- @while --}}
-                            <option>Director</option>
-                            <option>Product Manager</option>
-                            <option>Tècnic de sala</option>
+                            <option value="1">Director</option>
+                            <option value="2">Product Manager</option>
+                            <option value="3">Departament tecnic</option>
                         </select></td>
                 </tr>
     
