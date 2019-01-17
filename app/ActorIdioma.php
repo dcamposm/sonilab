@@ -8,6 +8,7 @@ class ActorIdioma extends Model
 {
     protected $table = 'actor_idioma';
     // $table->primary(['dni_actor', 'id_idioma']);
+    public $incrementing = false;
     public $timestamps = false;
     
     /*
