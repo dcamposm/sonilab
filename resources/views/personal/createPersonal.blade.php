@@ -107,10 +107,10 @@
                     <td>Idioma: </td> 
 
                     <td>
-                            <input type="checkbox" name="idioma" value="1">Catala
-                            <input type="checkbox" name="idioma" value="2">Castella
-                            <input type="checkbox" name="idioma" value="3">Angles
-                            <input type="checkbox" name="idioma" value="4">Frances
+                            <input type="checkbox" name="idioma[]" value="1">Catala
+                            <input type="checkbox" name="idioma[]" value="2">Castella
+                            <input type="checkbox" name="idioma[]" value="3">Angles
+                            <input type="checkbox" name="idioma[]" value="4">Frances
                     </td>
                 </tr>
             </table>
