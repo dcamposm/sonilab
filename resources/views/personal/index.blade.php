@@ -23,7 +23,7 @@
 
 
     @foreach ($actors as $actor)
-        <tr>
+        <tr class="selected">
             <td>{{$actor->dni_actor}}</td>
             <td>{{$actor->nom_actor}}</td>
             <td>{{$actor->primer_cognom_actor}}</td>
