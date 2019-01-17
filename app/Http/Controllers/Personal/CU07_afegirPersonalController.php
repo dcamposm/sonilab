@@ -8,6 +8,8 @@ use App\Actor;
 use App\Director;
 use App\TecnicSala;
 use App\Traductor;
+use App\ActorIdioma;
+use App\TraductorIdioma;
 
 class CU07_afegirPersonalController extends Controller {
 
@@ -31,6 +33,18 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->nacionalitat_actor=$request->input('nacionalitat');
                 $pers->nss_actor=$request->input('nss');
                 $pers->iban_actor=$request->input('iban');
+                        
+                $pers->save();
+                
+                $idioma = new ActorIdioma;
+                $idioma->dni_actor=$request->input('dni');
+                $idioma->id_idioma=$request->input('idioma');
+                $idioma->tarifa_video_take=1;
+                $idioma->tarifa_video_cg=1;
+                $idioma->tarifa_cine_take=1;
+                $idioma->tarifa_cine_cg=1;
+                $idioma->tarifa_canso=1;
+                $idioma->save();
                 break;
             case 'director':
                 $pers = new Director;
@@ -45,7 +59,9 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->sexe_director=$request->input('sexe');
                 $pers->nacionalitat_director=$request->input('nacionalitat');
                 $pers->nss_director=$request->input('nss');
-                $pers->iban_director=$request->input('iban');                
+                $pers->iban_director=$request->input('iban');
+        
+                $pers->save();                
                 break;
             case 'tecnic_sala':
                 $pers = new TecnicSala;
@@ -61,6 +77,8 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->nacionalitat_tecnic_sala=$request->input('nacionalitat');
                 $pers->nss_tecnic_sala=$request->input('nss');
                 $pers->iban_tecnic_sala=$request->input('iban');
+                        
+                $pers->save();
                 break;
             case 'traductor':
                 $pers = new Traductor;
@@ -76,10 +94,24 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->nacionalitat_traductor=$request->input('nacionalitat');
                 $pers->nss_traductor=$request->input('nss');
                 $pers->iban_traductor=$request->input('iban');
+                $pers->save();
+                
+                $idioma = new TraductorIdioma;
+                $idioma->dni_traductor=$request->input('dni');
+                $idioma->id_idioma=$request->input('idioma');
+                $idioma->traductor=1;
+                $idioma->ajustador=1;
+                $idioma->linguista=0;
+                $idioma->tarifa_traductor=1;
+                $idioma->tarifa_ajustador=1;
+                $idioma->tarifa_linguista=1;
+                $idioma->tarifa_traductor_ajustador=1;
+                $idioma->tarifa_totes=1;
+                $idioma->save();
+                
                 break;
         }
-        
-        $pers->save();
+
         
         /*if (!isset($_POST['dni'])){
             return view('pages', 'error');

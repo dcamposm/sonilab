@@ -102,7 +102,19 @@
                             <option value="traductor">Traductor/Ajustador</option>
                         </select></td>
                 </tr>
+                
+                <tr>
+                    <td>Idioma: </td> 
 
+                    <td><select name="idioma" id="idioma">
+                            <option>Selecciona idioma...</option>
+                            {{-- @while --}}
+                            <option value="1">Catala</option>
+                            <option value="2">Castella</option>
+                            <option value="3">Angles</option>
+                            <option value="4">Frances</option>
+                        </select></td>
+                </tr>
             </table>
 
             <button type="sumbit">Afegir personal</button>
