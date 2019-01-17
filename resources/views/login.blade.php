@@ -4,7 +4,7 @@
 	<h1>LOGIN</h1>
 	<div class="spacing_content">
 		<!--php echo constant('URL');?>usuari/login-->
-		<form action="#" method="post" enctype="multipart/form-data">
+		<form class="forms" action="#" method="post" enctype="multipart/form-data">
 			<div>
 				<div>
 					<p>Username<p>

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
-<h2>Usuaris</h2>
+<h1>Usuaris</h1>
 
 
-<table>
+<table class="tableShow">
     <tr>
         <th>Alias usuari</th>
         <th>Nom usuari</th>

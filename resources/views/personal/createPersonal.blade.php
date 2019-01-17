@@ -4,18 +4,9 @@
 
 <div>
 
-    <div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Afegir Personal</div>
+    <h1>
+        Afegir personal
+	</h1>
 
     <div>
         <form method="POST" action="{{ url('/personal/crear/formulari') }}">

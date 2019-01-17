@@ -4,21 +4,12 @@
 
 <div>
 
-    <div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Afegir usuari</div>
+    <h1>
+        Afegir usuari
+	</h1>
 
     <div>
-        <form method="POST" action="{{ url('/usuari/crear/formulari') }}">
+        <form class="forms" method="POST" action="{{ url('/usuari/crear/formulari') }}">
             {{ csrf_field() }}
 
             <table>
