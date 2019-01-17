@@ -2,7 +2,7 @@
 @section('content')
 
 <div>
-    <div>Modificar Tecnic de sala</div>
+    <h1>Modificar Tecnic de sala</h1>
     <div>
         <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_tecnic_sala }}">
             
