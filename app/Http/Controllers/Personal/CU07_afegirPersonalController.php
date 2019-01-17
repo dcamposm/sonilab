@@ -36,15 +36,18 @@ class CU07_afegirPersonalController extends Controller {
                         
                 $pers->save();
                 
-                $idioma = new ActorIdioma;
-                $idioma->dni_actor=$request->input('dni');
-                $idioma->id_idioma=$request->input('idioma');
-                $idioma->tarifa_video_take=1;
-                $idioma->tarifa_video_cg=1;
-                $idioma->tarifa_cine_take=1;
-                $idioma->tarifa_cine_cg=1;
-                $idioma->tarifa_canso=1;
-                $idioma->save();
+                foreach($request->input('idioma') as $selected) {
+                    $idioma = new ActorIdioma;
+                    $idioma->dni_actor=$request->input('dni');
+                    $idioma->id_idioma=$selected;
+                    $idioma->tarifa_video_take=1;
+                    $idioma->tarifa_video_cg=1;
+                    $idioma->tarifa_cine_take=1;
+                    $idioma->tarifa_cine_cg=1;
+                    $idioma->tarifa_canso=1;
+                    $idioma->save();              
+                }
+                
                 break;
             case 'director':
                 $pers = new Director;
@@ -96,18 +99,20 @@ class CU07_afegirPersonalController extends Controller {
                 $pers->iban_traductor=$request->input('iban');
                 $pers->save();
                 
-                $idioma = new TraductorIdioma;
-                $idioma->dni_traductor=$request->input('dni');
-                $idioma->id_idioma=$request->input('idioma');
-                $idioma->traductor=1;
-                $idioma->ajustador=1;
-                $idioma->linguista=0;
-                $idioma->tarifa_traductor=1;
-                $idioma->tarifa_ajustador=1;
-                $idioma->tarifa_linguista=1;
-                $idioma->tarifa_traductor_ajustador=1;
-                $idioma->tarifa_totes=1;
-                $idioma->save();
+                foreach($request->input('idioma') as $selected) {
+                    $idioma = new TraductorIdioma;
+                    $idioma->dni_traductor=$request->input('dni');
+                    $idioma->id_idioma=$selected;
+                    $idioma->traductor=1;
+                    $idioma->ajustador=1;
+                    $idioma->linguista=0;
+                    $idioma->tarifa_traductor=1;
+                    $idioma->tarifa_ajustador=1;
+                    $idioma->tarifa_linguista=1;
+                    $idioma->tarifa_traductor_ajustador=1;
+                    $idioma->tarifa_totes=1;
+                    $idioma->save();
+                }
                 
                 break;
         }
