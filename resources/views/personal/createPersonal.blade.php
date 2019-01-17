@@ -67,7 +67,7 @@
                     <td>Sexe: </td> 
                     
                     <td><select name="sexe" id="sexe">
-                            <option>Selecciona departament...</option>
+                            <option>Selecciona sexe...</option>
                             {{-- @while --}}
                             <option value="home">Home</option>
                             <option value="dona">Dona</option>
@@ -94,7 +94,7 @@
                     <td>Rol: </td> 
 
                     <td><select name="rol" id="rol">
-                            <option>Selecciona departament...</option>
+                            <option>Selecciona rol...</option>
                             {{-- @while --}}
                             <option value="actor">Actor</option>
                             <option value="director">Director de doblatge</option>
