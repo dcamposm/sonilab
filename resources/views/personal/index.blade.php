@@ -45,7 +45,7 @@
     @endforeach
     
     @foreach ($directors as $dir)
-        <tr>
+        <tr class="selected">
             <td>{{$dir->dni_director}}</td>
             <td>{{$dir->nom_director}}</td>
             <td>{{$dir->primer_cognom_director}}</td>
@@ -67,7 +67,7 @@
     @endforeach
     
     @foreach ($tecnics as $tecnic)
-        <tr>
+        <tr class="selected">
             <td>{{$tecnic->dni_tecnic_sala}}</td>
             <td>{{$tecnic->nom_tecnic_sala}}</td>
             <td>{{$tecnic->primer_tecnic_sala}}</td>
@@ -89,7 +89,7 @@
     @endforeach
     
     @foreach ($traductors as $traductor)
-        <tr>
+        <tr class="selected">
             <td>{{$traductor->dni_traductor}}</td>
             <td>{{$traductor->nom_traductor}}</td>
             <td>{{$traductor->primer_cognom_traductor}}</td>
