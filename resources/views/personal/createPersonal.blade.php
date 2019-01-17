@@ -134,18 +134,16 @@
                 
                 <tr id="tarifa_canso">
                     <td>Tarifa: </td>
-                    <td><input type="number" name="tarifa_canso_take" id="tarifa_canso_take"></td>
-                    <td>Tarifa dels cg: </td>
-                    <td><input type="number" name="tarifa_canso_cg" id="tarifa_canso_cg"></td>
+                    <td><input type="number" name="tarifa_canso" id="tarifa_canso"></td>
                 </tr>
                 
                 <tr id="tipus_traductor">
                     <td>Tarifa per: </td> 
 
                     <td>
-                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_trad" value="traductor">Traductor
-                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_ajus" value="ajustador">Ajustador
-                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_ling" value="linguista">Linguista
+                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_trad" value="1">Traductor
+                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_ajus" value="2">Ajustador
+                        <input type="checkbox" name="tipus_traductor[]" id="tipus_traductor_ling" value="3">Linguista
                     </td>
                 </tr>
                 

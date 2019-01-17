@@ -40,11 +40,19 @@ class CU07_afegirPersonalController extends Controller {
                     $idioma = new ActorIdioma;
                     $idioma->dni_actor=$request->input('dni');
                     $idioma->id_idioma=$selected;
-                    $idioma->tarifa_video_take=1;
-                    $idioma->tarifa_video_cg=1;
-                    $idioma->tarifa_cine_take=1;
-                    $idioma->tarifa_cine_cg=1;
-                    $idioma->tarifa_canso=1;
+                    switch ($request->input('tipus')) {
+                        case "video":
+                            $idioma->tarifa_video_take=$request->input('tarifa_video_take');
+                            $idioma->tarifa_video_cg=$request->input('tarifa_video_cg');
+                            break;
+                        case "cine":
+                            $idioma->tarifa_cine_take=$request->input('tarifa_cine_take');
+                            $idioma->tarifa_cine_cg=$request->input('tarifa_cine_cg');
+                            break;
+                        case "canso":
+                            $idioma->tarifa_cine_cg=$request->input('tarifa_canso');
+                            break;
+                    }
                     $idioma->save();              
                 }
                 
@@ -103,14 +111,24 @@ class CU07_afegirPersonalController extends Controller {
                     $idioma = new TraductorIdioma;
                     $idioma->dni_traductor=$request->input('dni');
                     $idioma->id_idioma=$selected;
-                    $idioma->traductor=1;
-                    $idioma->ajustador=1;
-                    $idioma->linguista=0;
-                    $idioma->tarifa_traductor=1;
-                    $idioma->tarifa_ajustador=1;
-                    $idioma->tarifa_linguista=1;
-                    $idioma->tarifa_traductor_ajustador=1;
-                    $idioma->tarifa_totes=1;
+                    foreach($request->input('tipus_traductor') as $trad) {
+                        switch ($trad){
+                            case 1:
+                                $idioma->traductor=1;
+                                break;
+                            case 2:
+                                $idioma->ajustador=1;
+                                break;
+                            case 3:
+                                $idioma->linguista=1;
+                                break;
+                        }
+                    }
+                    $idioma->tarifa_traductor=$request->input('tarifa_traductor');
+                    $idioma->tarifa_ajustador=$request->input('tarifa_ajustador');
+                    $idioma->tarifa_linguista=$request->input('tarifa_linguista');
+                    $idioma->tarifa_traductor_ajustador=$request->input('tarifa_traductor_ajustador');
+                    $idioma->tarifa_totes=$request->input('tarifa_totes');
                     $idioma->save();
                 }
                 
@@ -122,6 +140,6 @@ class CU07_afegirPersonalController extends Controller {
             return view('pages', 'error');
         }*/
         //$personal = Personal::alta($_POST['dni'], $_POST['nom'], $_POST['cog1'], $_POST['cog2'], $_POST['email'], $_POST['telefon'], $_POST['dire'], $_POST['naix'], $_POST['nss'], $_POST['iban']);
-        return view('personal.createPersonal');
+        return redirect()->action('Personal\CU06_personalController@index');
     }
 }

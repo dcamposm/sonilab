@@ -8,7 +8,8 @@ use App\Actor;
 use App\Director;
 use App\TecnicSala;
 use App\Traductor;
-
+use App\ActorIdioma;
+use App\TraductorIdioma;
 class CU09_eliminarPersonalController extends Controller
 {
     public function delete($rol, $dni) {        
@@ -17,8 +18,9 @@ class CU09_eliminarPersonalController extends Controller
         }*/
         
         switch ($rol){
-            case 'actor': 
-                $pers = Actor::where('dni_actor', $dni)->delete();
+            case 'actor':
+                $idio = ActorIdioma::where('dni_actor', $dni)->delete();
+                $pers = Actor::where('dni_actor', $dni)->delete();              
                 break;
             
             case 'director':
@@ -30,6 +32,7 @@ class CU09_eliminarPersonalController extends Controller
                 break;
             
             case 'traductor':
+                $idio = TraductorIdioma::where('dni_traductor', $dni)->delete();
                 $pers = Traductor::where('dni_traductor', $dni)->delete();
                 break;
         }
