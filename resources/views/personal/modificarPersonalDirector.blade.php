@@ -2,7 +2,7 @@
 @section('content')
 
 <div>
-    <div>Modificar Director</div>
+    <h1>Modificar Director</h1>
     <div>
         <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_director }}">
             

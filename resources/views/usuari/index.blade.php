@@ -16,7 +16,7 @@
 
     @foreach ($users as $user)
 
-    <tr>
+    <tr class="selected">
         <td>{{$user->alias_usuari}}</td>
         <td>{{$user->nom_usuari}}</td>
         <td>{{$user->primer_cognom_usuari}}</td>
