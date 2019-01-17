@@ -103,17 +103,15 @@
                         </select></td>
                 </tr>
                 
-                <tr>
+                <tr  id="idioma">
                     <td>Idioma: </td> 
 
-                    <td><select name="idioma" id="idioma">
-                            <option>Selecciona idioma...</option>
-                            {{-- @while --}}
-                            <option value="1">Catala</option>
-                            <option value="2">Castella</option>
-                            <option value="3">Angles</option>
-                            <option value="4">Frances</option>
-                        </select></td>
+                    <td>
+                            <input type="checkbox" name="idioma" value="1">Catala
+                            <input type="checkbox" name="idioma" value="2">Castella
+                            <input type="checkbox" name="idioma" value="3">Angles
+                            <input type="checkbox" name="idioma" value="4">Frances
+                    </td>
                 </tr>
             </table>
 
