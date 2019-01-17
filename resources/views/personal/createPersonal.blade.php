@@ -99,7 +99,7 @@
                     <td>Idioma: </td> 
 
                     <td>
-                            <input type="checkbox" name="idioma[]" value="1">Catala
+                        <input type="checkbox" name="idioma[]" value="1" checked>Catala
                             <input type="checkbox" name="idioma[]" value="2">Castella
                             <input type="checkbox" name="idioma[]" value="3">Angles
                             <input type="checkbox" name="idioma[]" value="4">Frances
@@ -150,7 +150,28 @@
                 </tr>
                 
                 <tr id="tarifa_traductor">
+                    <td>Tarifa traductor: </td>
                     <td><input type="number" name="tarifa_traductor"></td>
+                </tr>
+                
+                <tr id="tarifa_ajustador">
+                    <td>Tarifa ajustador: </td>
+                    <td><input type="number" name="tarifa_ajustador"></td>
+                </tr>
+                
+                <tr id="tarifa_linguista">
+                    <td>Tarifa linguista: </td>
+                    <td><input type="number" name="tarifa_linguista"></td>
+                </tr>
+                
+                <tr id="tarifa_traductor_ajustador">
+                    <td>Tarifa traductor i ajustador: </td>
+                    <td><input type="number" name="tarifa_traductor_ajustador"></td>
+                </tr>
+                
+                <tr id="tarifa_totes">
+                    <td>Tarifa tots: </td>
+                    <td><input type="number" name="tarifa_totes"></td>
                 </tr>
                 
             </table>
