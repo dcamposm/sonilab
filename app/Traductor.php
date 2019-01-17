@@ -8,6 +8,7 @@ class Traductor extends Model
 {
     protected $table = 'traductor';
     protected $primaryKey = 'dni_traductor';
+    public $incrementing = false;
     public $timestamps = false;
     
     /*

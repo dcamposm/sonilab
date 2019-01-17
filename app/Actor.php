@@ -8,6 +8,7 @@ class Actor extends Model
 {
     protected $table = 'actor';
     protected $primaryKey = 'dni_actor';
+    public $incrementing = false;
     public $timestamps = false;
     
     /*

@@ -8,6 +8,7 @@ class Usuari extends Model
 {
     protected $table = 'usuari';
     protected $primaryKey = 'alias_usuari';
+    public $incrementing = false;
     public $timestamps = false;
     
     /*
