@@ -15,10 +15,20 @@ $(document).ready( function(){
         if ($("#rol").val()=='actor'){
             $("#idioma").show();
             $("#tipus_tarifa").show();
+            $("#tipus_traductor").hide();
+            $("#tarifa_traductor").hide();
+            $("#tarifa_ajustador").hide();
+            $("#tarifa_linguista").hide();
+            $("#tarifa_traductor_ajustador").hide();
+            $("#tarifa_totes").hide();
         }
         if ($("#rol").val()=='traductor'){
             $("#idioma").show();
             $("#tipus_traductor").show();
+            $("#tipus_tarifa").hide();
+            $("#tarifa_video").hide();
+            $("#tarifa_cine").hide();
+            $("#tarifa_canso").hide();
         };
         if ($("#rol").val()=='director' || $("#rol").val()=='tecnic_sala'){
             $("#idioma").hide();
@@ -26,25 +36,23 @@ $(document).ready( function(){
     });
     
     $("#click_tipus_tarifa").click( function(){
+   
         if ($("#click_tipus_tarifa").val()=='video'){
             $("#tarifa_video").show();
+            $("#tarifa_cine").hide();
+            $("#tarifa_canso").hide();
         };
         if ($("#click_tipus_tarifa").val()=='cine'){
             $("#tarifa_cine").show();
+            $("#tarifa_video").hide();
+            $("#tarifa_canso").hide();
         };
         if ($("#click_tipus_tarifa").val()=='canso'){
             $("#tarifa_canso").show();
+            $("#tarifa_cine").hide();
+            $("#tarifa_video").hide();
         };
     });
     
-    var cont=0;
-    $("#tipus_traductor_trad").on( 'change', function() {
-        if( $(this).is(':checked') ) {
-            $("#tarifa_traductor").show();
-            cont++;
-        } else if () {
-           $("#tarifa_traductor").hide(); 
-           cont--
-        }
-    });
+    
 });

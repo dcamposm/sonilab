@@ -5,12 +5,12 @@
 
 <table class="tableShow">
     <tr>
-        <th>Alias usuari</th>
-        <th>Nom usuari</th>
-        <th>Cognom usuari</th>
-        <th>Segon cognom usuari</th>
-        <th>Email usuari</th>
-        <th>Telèfon usuari</th>
+        <th>Alias</th>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Segon cognom</th>
+        <th>Email</th>
+        <th>Telèfon</th>
         <th>Acciones</th>
     </tr>
 
