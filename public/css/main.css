@@ -20,18 +20,27 @@ h1 {
     padding: 1em 0;
     width: 100%;
     font-size: 1.5em;
-    letter-spacing: 1em;
-    
+    letter-spacing: 0.5em;
 }
 body, .container {
-    background-color: #929191;
+    background-color: DimGray;
+	margin: 0 2em;
     font-family: Arial, Helvetica;
 	font-size: 16px;
 }
 .container {
+	clear: both;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	border-radius: 2em;
     line-height: 1;
     padding: 0 10em;
+	padding-bottom: 2em;
     color: white;
+    background-color: #929191;
+}
+.center {
+	text-align: center;
 }
 .header {
     width: 100%;
@@ -52,7 +61,7 @@ body, .container {
     float: left;
 }
 .header .menu {
-    padding: 0em 1em;
+    padding: 0em 0em;
     float: right;
 }
 .header .nav {
@@ -61,7 +70,7 @@ body, .container {
     float: left;
 }
 .header .nav a {
-    margin-top: 1em;
+    margin-top: 0;
     float: left;
     width: 4em;
     font-weight: bold;
@@ -80,7 +89,7 @@ body, .container {
     padding: 0.5em;
     height: 3em;
     float: left;
-    margin-top: 0.6em;
+    margin-top: 0;
 }
 .main {
     width: 100%;
@@ -98,7 +107,7 @@ body, .container {
     clear: both;
     padding: 1em 0;
 }
-.spacing_login div {
+.spacing_content div {
     padding: 1em 0;
 }
 .input {
@@ -113,4 +122,17 @@ body, .container {
 }
 .footer .info {
     padding: 1em 1em;
+}
+.form_pattern {
+	float: left;
+	clear: both;
+}
+.form_pattern div {
+	clear: both;
+}
+.form_pattern div div{
+	clear: both;
+}
+.form_pattern div div div{
+	float: left;
 }
