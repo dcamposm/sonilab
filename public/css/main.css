@@ -84,6 +84,7 @@ body {
 	border-color: black;
 	border-radius: 0px 0px 1em 1em;
 	text-align: center;
+	text-decoration: none;
 }
 .header .nav a:hover {
 	background-color: lightgray;
