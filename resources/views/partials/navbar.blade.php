@@ -8,9 +8,9 @@
 				<a href='#'>Calendari</a>
 				<a href='#'>Registres</a>
 				<a href='{{url('usuari/index')}}'>Usuaris</a>
-				<a href='{{}}'>Perfil</a>
+				<a href='#'>Perfil</a>
 			</div>
-			<a href='#'>
+			<a href='{{url ('logout')}}'>
 				<img src="{!! asset('imgs/logout.png') !!}" alt="Sonilab Studios" class="logout">
 			</a>
 		</div>

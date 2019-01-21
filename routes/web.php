@@ -12,21 +12,25 @@
 */
 
 Route::get('/', 'CU01_loginController@login');
+Route::put('usuari', 'usuari\CU02_usuariController@auth');
+Route::get('logout', 'CU01_loginController@logout');
 
-Route::group(['prefix' => 'usuari'], function () {
-    Route::get('index', 'usuari\CU02_usuariController@index');
-    Route::get('crear', 'usuari\CU03_afegirUsuariController@formCreate');
-    Route::post('crear/formulari', 'usuari\CU03_afegirUsuariController@create');
-    Route::get('modificar/{alias}', 'usuari\CU04_modificarUsuariController@formUpdate');
-    Route::post('modificar/formulari/{alias}', 'usuari\CU04_modificarUsuariController@update');
-    Route::get('eliminar/{alias}', 'usuari\CU05_eliminarUsuariController@delete');
-});
+Route::group(['middleware' => 'authUser'], function() {
+    Route::group(['prefix' => 'usuari'], function () {
+        Route::get('index', 'usuari\CU02_usuariController@index');
+        Route::get('crear', 'usuari\CU03_afegirUsuariController@formCreate');
+        Route::post('crear/formulari', 'usuari\CU03_afegirUsuariController@create');
+        Route::get('modificar/{alias}', 'usuari\CU04_modificarUsuariController@formUpdate');
+        Route::post('modificar/formulari/{alias}', 'usuari\CU04_modificarUsuariController@update');
+        Route::get('eliminar/{alias}', 'usuari\CU05_eliminarUsuariController@delete');
+    });
 
-Route::group(['prefix' => 'personal'], function () {
-    Route::get('index', 'Personal\CU06_personalController@index');
-    Route::get('crear', 'Personal\CU07_afegirPersonalController@formCreate');
-    Route::post('crear/formulari', 'Personal\CU07_afegirPersonalController@create');
-    Route::get('modificar/{rol}/{dni}', 'Personal\CU08_modificarPersonalController@formUpdate');
-    Route::post('modificar/formulari/{rol}/{dni}', 'Personal\CU08_modificarPersonalController@update');
-    Route::get('eliminar/{rol}/{dni}', 'Personal\CU09_eliminarPersonalController@delete');
+    Route::group(['prefix' => 'personal'], function () {
+        Route::get('index', 'Personal\CU06_personalController@index');
+        Route::get('crear', 'Personal\CU07_afegirPersonalController@formCreate');
+        Route::post('crear/formulari', 'Personal\CU07_afegirPersonalController@create');
+        Route::get('modificar/{rol}/{dni}', 'Personal\CU08_modificarPersonalController@formUpdate');
+        Route::post('modificar/formulari/{rol}/{dni}', 'Personal\CU08_modificarPersonalController@update');
+        Route::get('eliminar/{rol}/{dni}', 'Personal\CU09_eliminarPersonalController@delete');
+    });
 });

@@ -4,16 +4,18 @@
 	<h1>LOGIN</h1>
 	<div class="spacing_content">
 		<!--php echo constant('URL');?>usuari/login-->
-		<form class="forms" action="#" method="post" enctype="multipart/form-data">
+		<form class="forms" action="{{ url('/usuari') }}" method="post" enctype="multipart/form-data">
+                    {{method_field('PUT')}}
+                    {{csrf_field()}}
 			<div>
 				<div>
 					<p>Username<p>
-					<input type='text' name='user'/>
+					<input type='text' name='alias'/>
 				</div>
 
 				<div>
 					<p>Password<p>
-					<input type='text' name='pass'/>
+                                        <input type='password' name='pass'/>
 				</div>
 				<label><input type="checkbox" id="check" value="rem"> Remember username</label>
 			</div>
