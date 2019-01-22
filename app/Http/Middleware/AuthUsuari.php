@@ -15,8 +15,7 @@ class AuthUsuari
      */
     public function handle($request, Closure $next)
     {
-        session()->put('users');
-        if (session()->has('users')){           
+        if (isset($_SESSION["usuari"])){           
             return redirect('/');            
         }
         
