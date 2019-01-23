@@ -1,6 +1,7 @@
 @import url("reset.css");
 a:link, a:visited {
 	color: black;
+        text-decoration: none;
 }
 a:hover {
 	color: red;
@@ -133,19 +134,38 @@ body {
 	padding: 1em 0;
 }
 .tableShow {
-	margin-top: 3em;
+	margin-top: 2em;
 	margin-bottom: 2em;
 	border-collapse: collapse;
+        width: 100%;
 }
 .tableShow th, .tableShow td {
 	border-bottom: 1px solid #ddd;
 	border-left-width: 0;
 	border-right-width: 0;
+        text-align: center;
 }
 .tableShow .selected:hover {
 	background-color: DimGray;
 }
 
+.menuTarifes {
+    float: right;
+    margin-bottom: 1em;
+}
+.menuTarifes a {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 1em 1em 1em 1em;
+    
+}
+
+.menuTarifes a:hover {
+    padding: 10px;
+    background-color: lightgray;
+    color: black;    
+}
 
 @media (max-width:1555px) {
 	body {

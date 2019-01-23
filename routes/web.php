@@ -33,4 +33,14 @@ Route::group(['middleware' => 'authUser'], function() {
         Route::put('modificar/formulari/{rol}/{dni}', 'Personal\CU08_modificarPersonalController@update');
         Route::get('eliminar/{rol}/{dni}', 'Personal\CU09_eliminarPersonalController@delete');
     });
+    
+    Route::group(['prefix' => 'tarifa'], function () {
+        Route::get('index/actor', 'Tarifa\CU10_tarifaController@indexActor');
+        Route::get('index/traductor', 'Tarifa\CU10_tarifaController@indexTraductor');
+        Route::get('crear/{rol}', 'Tarifa\CU11_afegirTarifaController@formCreate');
+        Route::post('crear/formulari/{rol}', 'Tarifa\CU11_afegirTarifaController@create');
+        Route::get('modificar/{rol}/{dni}/{idioma}', 'Tarifa\CU12_modificarTarifaController@formUpdate');
+        Route::post('modificar/formulari/{rol}/{dni}/{idioma}', 'Tarifa\CU12_modificarTarifaController@update');
+        Route::get('eliminar/{rol}/{dni}/{idioma}', 'Tarifa\CU13_eliminarTarifaController@delete');        
+    });
 });
