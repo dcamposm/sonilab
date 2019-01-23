@@ -5,12 +5,14 @@ namespace App\Http\Controllers\usuari;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Usuari;
+use App\DepartamentUsuari;
 
 class CU03_afegirUsuariController extends Controller
 {
        
     public function formCreate(){
-        return view('usuari.createUsuaris');
+        $deps = DepartamentUsuari::All();
+        return view('usuari.createUsuaris', array('deps'=>$deps));
     }
     
     public function create(Request $request) {

@@ -63,9 +63,9 @@
                     <td><select name="departament" id="departament">
                             <option>Selecciona departament...</option>
                             {{-- @while --}}
-                            <option value="1">Director de estudi</option>
-                            <option value="2">Departament de producció</option>
-                            <option value="3">Departament tecnic</option>
+                            @foreach ($deps as $dep)
+                                <option value="{{$dep->id_rol}}">{{$dep->nom_rol}}</option>
+                            @endforeach
                         </select></td>
                 </tr>
 
