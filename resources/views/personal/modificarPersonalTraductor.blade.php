@@ -5,7 +5,7 @@
     <h1>Modificar Traductor</h1>
     <div>
         <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_traductor }}">
-            
+            @method('PUT')
             {{ csrf_field() }}
             
             <table>

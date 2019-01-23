@@ -5,7 +5,7 @@
     <h1>Modificar Director</h1>
     <div>
         <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_director }}">
-            
+            @method('PUT')
             {{ csrf_field() }}
             
             <table>

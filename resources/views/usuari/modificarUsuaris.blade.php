@@ -5,7 +5,7 @@
     <h1>Modificar usuari</h1>
     <div>
         <form method="POST" action="{{ url('/usuari/modificar/formulari') }}/{{ $user->alias_usuari }}">
-            
+            @method('PUT')
             {{ csrf_field() }}
             
             <table>

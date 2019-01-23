@@ -5,7 +5,7 @@
     <h1>Modificar Tecnic de sala</h1>
     <div>
         <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_tecnic_sala }}">
-            
+            @method('PUT')
             {{ csrf_field() }}
             
             <table>
