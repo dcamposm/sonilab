@@ -2,7 +2,10 @@
 @section('content')
 <h1>Personal</h1>
 
-
+<div class="menuTarifes">
+    <a href='{{url('tarifa/index/actor')}}'>Tarifes Actors</a>
+    <a href='{{url('tarifa/index/traductor')}}'>Tarifes Traductors</a>
+</div>
 <table class="tableShow">
     <tr>
         <th>DNI</th>
