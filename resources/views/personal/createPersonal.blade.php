@@ -12,14 +12,11 @@
         <form method="POST" action="{{ url('/personal/crear/formulari') }}">
             {{ csrf_field() }}
 
-            <table>
+            <table class="formTable">
 
                 <tr>
                     <td>DNI: </td>
                     <td><input type="text" name="dni" id="dni"></td>
-                </tr>
-
-                <tr>
                     <td>Nom: </td>
                     <td><input type="text" name="nom" id="nom"></td>
                 </tr>
@@ -27,9 +24,6 @@
                 <tr>
                     <td>Primer Congom: </td>
                     <td><input type="text" name="cog1" id="cog1"></td>
-                </tr>
-
-                <tr>
                     <td>Segon Cognom: </td>
                     <td><input type="text" name="cog2" id="cog2"></td>
                 </tr>
@@ -37,9 +31,6 @@
                 <tr>
                     <td>Email: </td>
                     <td><input type="text" name="email" id="email"></td>
-                </tr>
-
-                <tr>
                     <td>Telèfon: </td>
                     <td><input type="number" name="telefon" id="telefon"></td>
                 </tr>
@@ -47,13 +38,10 @@
                 <tr>
                     <td>Direccio: </td>
                     <td><input type="text" name="direccio" id="direccio"></td>
-                </tr>
-
-                <tr>
                     <td>Data Naixment: </td>
                     <td><input type="date" name="datanaix" id="datanaix"></td>
                 </tr>
-                
+
                 <tr>
                     <td>Sexe: </td> 
                     
@@ -64,19 +52,13 @@
                             <option value="dona">Dona</option>
                         </select>
                     </td>
-                </tr>
-
-                <tr>
                     <td>Nacionalitat: </td>
                     <td><input type="text" name="nacionalitat" id="nacionalitat"></td>
                 </tr>
-
+                
                 <tr>
                     <td>NSS: </td>
                     <td><input type="text" name="nss" id="nss"></td>
-                </tr>
-
-                <tr>
                     <td>IBAN: </td>
                     <td><input type="text" name="iban" id="iban"></td>
                 </tr>

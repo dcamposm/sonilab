@@ -32,6 +32,17 @@ $(document).ready( function(){
         };
         if ($("#rol").val()=='director' || $("#rol").val()=='tecnic_sala'){
             $("#idioma").hide();
+            $("#tipus_traductor").hide();
+            $("#tipus_tarifa").hide();
+            $("#tarifa_video").hide();
+            $("#tarifa_cine").hide();
+            $("#tarifa_canso").hide();
+            $("#tipus_traductor").hide();
+            $("#tarifa_traductor").hide();
+            $("#tarifa_ajustador").hide();
+            $("#tarifa_linguista").hide();
+            $("#tarifa_traductor_ajustador").hide();
+            $("#tarifa_totes").hide();
         };
     });
     

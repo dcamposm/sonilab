@@ -12,7 +12,7 @@
         <form method="POST" action="{{ url('/tarifa/crear/formulari') }}/actor">
             {{ csrf_field() }}
 
-            <table>
+            <table  class="formTable">
                 
                 <tr>
                     <td>DNI: </td> 

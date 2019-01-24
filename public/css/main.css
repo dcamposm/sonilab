@@ -150,6 +150,15 @@ body {
 	background-color: DimGray;
 }
 
+.formTable td{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+form button {
+    float: right;
+}
+
 .menuTarifes {
     float: right;
     margin-bottom: 1em;

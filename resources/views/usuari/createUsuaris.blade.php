@@ -10,19 +10,16 @@
         <form class="forms" method="POST" action="{{ url('/usuari/crear/formulari') }}">
             {{ csrf_field() }}
 
-            <table>
+            <table class="formTable">
 
                 <tr>
                     <td>Alias: </td>
-                    <td><input type="text" name="alias" id="alias"></td>
+                    <td><input type="text" name="alias" id="alias"></td>                   
                 </tr>
 
                 <tr>
                     <td>Contrasenya: </td>
                     <td><input type="password" name="contrasenya" id="contrasenya"></td>
-                </tr>
-
-                <tr>
                     <td>Repeteix la contrasenya: </td>
                     <td><input type="password" name="recontrasenya" id="recontrasenya"></td>
                 </tr>
@@ -30,9 +27,6 @@
                 <tr>
                     <td>DNI: </td>
                     <td><input type="text" name="dni" id="dni"></td>
-                </tr>
-
-                <tr>
                     <td>Nom: </td>
                     <td><input type="text" name="nom" id="nom"></td>
                 </tr>
@@ -40,9 +34,6 @@
                 <tr>
                     <td>Primer cognom: </td>
                     <td><input type="text" name="primer_cognom" id="primer_cognom"></td>
-                </tr>
-
-                <tr>
                     <td>Segon cognom: </td>
                     <td><input type="text" name="segon_cognom" id="segon_cognom"></td>
                 </tr>
@@ -50,9 +41,6 @@
                 <tr>
                     <td>Email: </td>
                     <td><input type="text" name="email" id="email"></td>
-                </tr>
-
-                <tr>
                     <td>Telèfon: </td>
                     <td><input type="number" name="telefon" id="telefon"></td>
                 </tr>
