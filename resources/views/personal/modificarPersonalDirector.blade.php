@@ -44,8 +44,11 @@
                     <td><select name="sexe" id="sexe">
                             <option>{{$per->sexe_director}}</option>
                             {{-- @while --}}
-                            <option value="home">Home</option>
-                            <option value="dona">Dona</option>
+                            @if ($per->sexe_director == 'Dona')
+                                <option value="home">Home</option>
+                            @else   
+                                <option value="dona">Dona</option>
+                            @endif
                         </select>
                     </td>
                     <td>Nacionalitat: </td>

@@ -35,6 +35,6 @@ class CU03_afegirUsuariController extends Controller
         
         //$user = Usuari::alta($_POST['alias'],$_POST['dni'],$_POST['nom'],$_POST['cog1'],$_POST['cog2'],$_POST['email'],$_POST['tel'],$_POST['pass'],$_POST['id_dep']);
         
-        return view('usuari.createUsuaris');
+        return redirect()->action('usuari\CU02_usuariController@index');
     }
 }

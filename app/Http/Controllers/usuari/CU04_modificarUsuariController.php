@@ -18,7 +18,7 @@ class CU04_modificarUsuariController extends Controller
         //$user=Usuari::findOrFail($alias_usuari);
         
         $user = Usuari::where('alias_usuari', $alias_usuari)->firstOrFail();
-        $departament = DepartamentUsuari::where('id_rol', $user->id_departament)->firstOrFail();
+        $departament = DepartamentUsuari::all();
         //$user = Usuari::buscar($_GET['alias']);
         
         return view('usuari.modificarUsuaris', array('user'=>$user,'departament'=>$departament));

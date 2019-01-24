@@ -42,11 +42,16 @@
                     <td>Departament: </td> 
                     
                     <td><select name="departament" id="departament">
-                            <option value="{{$user->id_departament}}">{{$departament->nom_rol}}</option>
-                            {{-- @while --}}
-                            <option value="1">Director de estudi</option>
-                            <option value="2">Departament de producció</option>
-                            <option value="3">Departament tecnic</option>
+                            @foreach ($departament as $dep)
+                                @if ($user->id_departament == $dep->id_rol)
+                                    <option value="{{$user->id_departament}}">{{$dep->nom_rol}}</option>
+                                @endif
+                            @endforeach
+                            @foreach ($departament as $dep)
+                                @if ($user->id_departament != $dep->id_rol)
+                                    <option value="{{$dep->id_rol}}">{{$dep->nom_rol}}</option>
+                                @endif
+                            @endforeach                            
                         </select></td>
                 </tr>
     

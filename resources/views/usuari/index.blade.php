@@ -11,6 +11,7 @@
         <th>Segon cognom</th>
         <th>Email</th>
         <th>Telèfon</th>
+        <th>Departament</th>
         <th>Acciones</th>
     </tr>
 
@@ -23,6 +24,11 @@
         <td>{{$user->segon_cognom_usuari}}</td>
         <td>{{$user->email_usuari}}</td>
         <td>{{$user->telefon_usuari}}</td>
+        @foreach ($deps as $dep)
+            @if ($user->id_departament == $dep->id_rol)
+                <td>{{$dep->nom_rol}}</td>
+            @endif
+        @endforeach
         <td>
             <a href="{{url('usuari/modificar/'.$user->alias_usuari)}}">Modificar</a>
             <a href="{{url('usuari/eliminar/'.$user->alias_usuari)}}">Eliminar</a>

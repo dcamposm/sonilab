@@ -5,14 +5,16 @@ namespace App\Http\Controllers\usuari;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Usuari;
+use App\DepartamentUsuari;
 
 class CU02_usuariController extends Controller
 {
     public function index(){
         
         $users = Usuari::All();
+        $deps = DepartamentUsuari::all();
         //$users = Usuari::mostrarTots();
-        return view('usuari.index', array('users'=>$users));
+        return view('usuari.index', array('users'=>$users, 'deps'=>$deps));
     }
     
     public function auth(Request $request) {        

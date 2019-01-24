@@ -8,7 +8,7 @@
 
             {{ csrf_field() }}
             
-            <table  class="formTable">
+            <table class="formTable">
                 
                 <tr>
                     <td>DNI: </td> 
