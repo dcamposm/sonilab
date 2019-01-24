@@ -50,7 +50,7 @@ class CU07_afegirPersonalController extends Controller {
                             $idioma->tarifa_cine_cg=$request->input('tarifa_cine_cg');
                             break;
                         case "canso":
-                            $idioma->tarifa_cine_cg=$request->input('tarifa_canso');
+                            $idioma->tarifa_canso=$request->input('tarifa_canso');
                             break;
                     }
                     $idioma->save();              

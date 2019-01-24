@@ -39,7 +39,7 @@ class CU11_afegirTarifaController extends Controller
                 $idioma->tarifa_cine_take=$request->input('tarifa_cine_take');
                 $idioma->tarifa_cine_cg=$request->input('tarifa_cine_cg');
 
-                $idioma->tarifa_cine_cg=$request->input('tarifa_canso');
+                $idioma->tarifa_canso=$request->input('tarifa_canso');
 
                 $idioma->save();
                 return redirect()->action('Tarifa\CU10_tarifaController@indexActor');

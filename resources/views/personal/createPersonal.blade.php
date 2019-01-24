@@ -96,7 +96,7 @@
                             {{-- @while --}}
                             <option value="video">Video</option>
                             <option value="cine">Cine</option>
-                            <option value="canso">Canso</option>
+                            <option value="canso">Canço</option>
                     </select></td>
                 </tr>
                 
