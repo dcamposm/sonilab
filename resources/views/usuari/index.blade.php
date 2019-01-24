@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<h1>Usuaris - Actual {{session('users')}}</h1>
+<h1>Usuaris - Actual <?php session_start(); echo $_SESSION["usuari"]; ?></h1>
 
 
 <table class="tableShow">

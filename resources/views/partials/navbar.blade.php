@@ -1,6 +1,7 @@
 <header>
-	<div class="header"> 
-		<img src="{!! asset('imgs/sonilab_logo.png') !!}" alt="Sonilab Studios" class="logo">
+	<div class="header"> 		
+                <?php if (isset($_SESSION['usuari'])) { ?>
+                <img src="{!! asset('imgs/sonilab_logo.png') !!}" alt="Sonilab Studios" class="logo">
 		<div class="menu">
 			<div class="nav">
 				<a href='#'>Projecte</a>
@@ -14,5 +15,8 @@
 				<img src="{!! asset('imgs/logout.png') !!}" alt="Sonilab Studios" class="logout">
 			</a>
 		</div>
+                <?php } else { ?>
+                <img src="{!! asset('imgs/sonilab_logo.png') !!}" alt="Sonilab Studios" class="logo-center">
+                <?php } ?>
 	</div>
 </header>

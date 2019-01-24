@@ -15,10 +15,9 @@ class AuthUsuari
      */
     public function handle($request, Closure $next)
     {
-        if (isset($_SESSION["usuari"])){           
-            return redirect('/');            
+        if (isset($_SESSION["usuari"])){
+            return redirect()->action('CU01_loginController@login');           
         }
-        
         return $next($request);
     }
 }

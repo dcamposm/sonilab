@@ -25,7 +25,7 @@ class CU02_usuariController extends Controller
             return redirect()->action('usuari\CU02_usuariController@index');
         }
         else {
-            return view('login');
+            return redirect()->action('CU01_loginController@login');
         }
     }
 }

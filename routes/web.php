@@ -15,7 +15,7 @@ Route::get('/', 'CU01_loginController@login');
 Route::put('usuari', 'usuari\CU02_usuariController@auth');
 Route::get('logout', 'CU01_loginController@logout');
 
-Route::group(['middleware' => 'authUser'], function() {
+//Route::group(['middleware' => 'authUser'], function() {
     Route::group(['prefix' => 'usuari'], function () {
         Route::get('index', 'usuari\CU02_usuariController@index');
         Route::get('crear', 'usuari\CU03_afegirUsuariController@formCreate');
@@ -24,7 +24,7 @@ Route::group(['middleware' => 'authUser'], function() {
         Route::put('modificar/formulari/{alias}', 'usuari\CU04_modificarUsuariController@update');
         Route::get('eliminar/{alias}', 'usuari\CU05_eliminarUsuariController@delete');
     });
-
+//});
     Route::group(['prefix' => 'personal'], function () {
         Route::get('index', 'Personal\CU06_personalController@index');
         Route::get('crear', 'Personal\CU07_afegirPersonalController@formCreate');
@@ -43,4 +43,4 @@ Route::group(['middleware' => 'authUser'], function() {
         Route::post('modificar/formulari/{rol}/{dni}/{idioma}', 'Tarifa\CU12_modificarTarifaController@update');
         Route::get('eliminar/{rol}/{dni}/{idioma}', 'Tarifa\CU13_eliminarTarifaController@delete');        
     });
-});
+
