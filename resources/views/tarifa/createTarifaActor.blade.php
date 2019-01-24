@@ -40,11 +40,9 @@
                             @endforeach
                         </select>
                     </td>
-                </tr>
+                </tr>             
                 <tr>
                     <td>Video:</td>
-                </tr>               
-                <tr>
                     <td>Tarifa dels take: </td>
                     <td><input type="number" name="tarifa_video_take" id="tarifa_video_take"></td>
                     <td>Tarifa dels cg: </td>
@@ -52,8 +50,6 @@
                 </tr>
                 <tr>
                     <td>Cine:</td>
-                </tr>   
-                <tr>
                     <td>Tarifa dels take: </td>
                     <td><input type="number" name="tarifa_cine_take" id="tarifa_cine_take"></td>
                     <td>Tarifa dels cg: </td>
@@ -61,8 +57,6 @@
                 </tr>
                 <tr>
                     <td>Canço:</td>
-                </tr>   
-                <tr>
                     <td>Tarifa: </td>
                     <td><input type="number" name="tarifa_canso"></td>
                 </tr>

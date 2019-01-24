@@ -2,93 +2,73 @@
 @section('content')
 
 <div>
-    <h1>Modificar Actor</h1>
+    <h1>Modificar Tarifa Actor</h1>
     <div>
-        <form method="POST" action="{{ url('/personal/modificar/formulari')}}/{{ $per->rol }}/{{ $per->dni_actor }}">
-            
+        <form method="POST" action="{{ url('/tarifa/modificar/formulari') }}/actor/{{ $tarifes->dni_actor }}/{{ $tarifes->id_idioma }}">
+
             {{ csrf_field() }}
             
             <table>
-            
-                <tr>
-                    <td>Nom: </td>
-                    <td><input type="text" name="nom" id="nom" value="{{$per->nom_actor}}"></td>
-                </tr>
                 
                 <tr>
-                    <td>Primer Congom: </td>
-                    <td><input type="text" name="cog1" id="cog1" value="{{$per->primer_cognom_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>Segon Cognom: </td>
-                    <td><input type="text" name="cog2" id="cog2" value="{{$per->segon_cognom_actor}}" ></td>
-                </tr>
-
-                <tr>
-                    <td>Email: </td>
-                    <td><input type="text" name="email" id="email" value="{{$per->email_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>Telèfon: </td>
-                    <td><input type="number" name="telefon" id="telefon" value="{{$per->telefon_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>Direccio: </td>
-                    <td><input type="text" name="direccio" id="direccio" value="{{$per->direccio_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>Data Naixment: </td>
-                    <td><input type="date" name="datanaix" id="datanaix" value="{{$per->data_naixement_actor}}"></td>
-                </tr>
-                
-                <tr>
-                    <td>Sexe: </td> 
+                    <td>DNI: </td> 
                     
-                    <td><select name="sexe" id="sexe">
-                            <option>{{$per->sexe_actor}}</option>
+                    <td>
+                        <select name="dni" id="dni">
+                            <option value="{{$tarifes->dni_actor}}">{{$tarifes->dni_actor}}</option>
                             {{-- @while --}}
-                            <option value="home">Home</option>
-                            <option value="dona">Dona</option>
+                            @foreach ($actors as $actor)
+                                @if ($tarifes->dni_actor != $actor->dni_actor)
+                                <option value="{{$actor->dni_actor}}">{{$actor->dni_actor}}</option>
+                                @endif
+                            @endforeach
                         </select>
                     </td>
                 </tr>
-
-                <tr>
-                    <td>Nacionalitat: </td>
-                    <td><input type="text" name="nacionalitat" id="nacionalitat" value="{{$per->nacionalitat_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>NSS: </td>
-                    <td><input type="text" name="nss" id="nss" value="{{$per->nss_actor}}"></td>
-                </tr>
-
-                <tr>
-                    <td>IBAN: </td>
-                    <td><input type="text" name="iban" id="iban" value="{{$per->iban_actor}}"></td>
-                </tr>
                 
                 <tr>
-                    <td>Rol: </td> 
-
+                    <td>Idioma: </td> 
+                    
                     <td>
-                        <select name="rol" id="rol">
-                            <option>{{$per->rol}}</option>
+                        <select name="idioma">
+                                
                             {{-- @while --}}
-                            <option value="actor">Actor</option>
-                            <option value="director">Director de doblatge</option>
-                            <option value="tecnic_sala">Tècnic de sala</option>
-                            <option value="traductor">Traductor/Ajustador/Linguista</option>
-                        </select></td>
+                            @foreach ($idiomes as $idioma)
+                                @if ($tarifes->id_idioma == $idioma->id_idioma)
+                                    <option value="{{$idioma->id_idioma}}">{{$idioma->nom_idioma}}</option>
+                                @endif
+                            @endforeach
+                            @foreach ($idiomes as $idioma)
+                                @if ($tarifes->id_idioma != $idioma->id_idioma)
+                                    <option value="{{$idioma->id_idioma}}">{{$idioma->nom_idioma}}</option>
+                                @endif
+                            @endforeach
+                        </select>
+                    </td>
+                </tr>              
+                <tr>
+                    <td>Video:</td>
+                    <td>Tarifa dels take: </td>
+                    <td><input type="number" name="tarifa_video_take" id="tarifa_video_take" value="{{$tarifes->tarifa_video_take}}"></td>
+                    <td>Tarifa dels cg: </td>
+                    <td><input type="number" name="tarifa_video_cg" id="tarifa_video_cg" value="{{$tarifes->tarifa_video_cg}}"></td>
                 </tr>
-
+                <tr>
+                    <td>Cine:</td>
+                    <td>Tarifa dels take: </td>
+                    <td><input type="number" name="tarifa_cine_take" id="tarifa_cine_take" value="{{$tarifes->tarifa_cine_take}}"></td>
+                    <td>Tarifa dels cg: </td>
+                    <td><input type="number" name="tarifa_cine_cg" id="tarifa_cine_cg" value="{{$tarifes->tarifa_cine_cg}}"></td>
+                </tr> 
+                <tr>
+                    <td>Canço:</td>
+                    <td>Tarifa: </td>
+                    <td><input type="number" name="tarifa_canso" value="{{$tarifes->tarifa_canso}}"></td>
+                </tr>
+                
             </table>
-            
-            <button type="sumbit">Modificar actor</button>
+
+            <button type="sumbit">Modificar tarifa</button>
         </form>
     </div>
 </div>

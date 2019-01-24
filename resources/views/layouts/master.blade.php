@@ -13,6 +13,12 @@
         <script src="{!!url('js/script_idioma.js')!!}"></script>
 </head>
 <body>
+    <?php
+    if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        } 
+    ?>
      @include('partials.navbar')
     <div class="container">
         @yield('content')

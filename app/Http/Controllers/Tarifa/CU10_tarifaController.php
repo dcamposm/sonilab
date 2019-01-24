@@ -15,7 +15,7 @@ class CU10_tarifaController extends Controller
     public function indexActor() {
         
         $actors = Actor::all();
-        $tarifes = ActorIdioma::all();
+        $tarifes = ActorIdioma::all()->sortBy("dni_actor");
         $idiomes = Idioma::all();
         
         return view('tarifa.indexActor', array('actors'=>$actors,'tarifes'=>$tarifes, 'idiomes'=>$idiomes));        
@@ -24,7 +24,7 @@ class CU10_tarifaController extends Controller
     public function indexTraductor() {
         
         $traductors = Traductor::all();
-        $tarifes = TraductorIdioma::all();
+        $tarifes = TraductorIdioma::all()->sortBy("dni_traductor");;
         $idiomes = Idioma::all();
         
         return view('tarifa.indexTraductor', array('traductors'=>$traductors,'tarifes'=>$tarifes, 'idiomes'=>$idiomes));        
