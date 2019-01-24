@@ -58,7 +58,7 @@ $(document).ready( function(){
             $("#tarifa_video").hide();
             $("#tarifa_canso").hide();
         };
-        if ($("#click_tipus_tarifa").val()=='canço'){
+        if ($("#click_tipus_tarifa").val()=='canso'){
             $("#tarifa_canso").show();
             $("#tarifa_cine").hide();
             $("#tarifa_video").hide();
