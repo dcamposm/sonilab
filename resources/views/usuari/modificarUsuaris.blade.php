@@ -59,6 +59,7 @@
             
             <button type="sumbit">Modificar usuari</button>
         </form>
+        <a class="ret" href='{{url('usuari/index')}}'>Retornar</a>
     </div>
 </div>
 

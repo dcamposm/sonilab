@@ -65,6 +65,7 @@
             
             <button type="sumbit">Modificar director</button>
         </form>
+        <a class="ret" href='{{url('personal/index')}}'>Retornar</a>
     </div>
 </div>
 

@@ -158,6 +158,7 @@
 
             <button type="sumbit">Afegir personal</button>
         </form>
+        <a class="ret" href='{{url('personal/index')}}'>Retornar</a>
     </div>
 </div>
 

@@ -66,6 +66,7 @@
             
             <button type="sumbit">Modificar tecnic de sala</button>
         </form>
+        <a class="ret" href='{{url('personal/index')}}'>Retornar</a>
     </div>
 </div>
 

@@ -64,6 +64,7 @@
             
             <button type="sumbit">Modificar Tarifa</button>
         </form>
+        <a class="ret" href='{{url('tarifa/index/traductor')}}'>Retornar</a>
     </div>
 </div>
 

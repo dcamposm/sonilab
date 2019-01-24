@@ -70,6 +70,7 @@
 
             <button type="sumbit">Modificar tarifa</button>
         </form>
+        <a class="ret" href='{{url('tarifa/index/actor')}}'>Retornar</a>
     </div>
 </div>
 

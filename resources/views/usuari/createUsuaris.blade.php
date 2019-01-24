@@ -58,9 +58,10 @@
                 </tr>
 
             </table>
-
+            
             <button type="sumbit">Afegir usuari</button>
         </form>
+        <a class="ret" href='{{url('usuari/index')}}'>Retornar</a>
     </div>
 </div>
 
